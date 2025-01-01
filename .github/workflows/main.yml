@@ -27,7 +27,7 @@ jobs:
     - name: Start Playit and Set Up RDP Tunnel
       env:
         PLAYIT_AUTH_KEY1: ${{ secrets.PL }} 
-        PLAYIT_AUTH_KEY2: ${{ secrets.PL }}
+        PLAYIT_AUTH_KEY2: ${{ secrets.PI }}
       run: |
         Start-Process -FilePath "$env:USERPROFILE\playit.exe" -ArgumentList "--secret $env:PLAYIT_AUTH_KEY" -NoNewWindow -Wait
         Start-Process -FilePath "$env:USERPROFILE\playit.exe" -NoNewWindow
